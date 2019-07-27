@@ -312,6 +312,8 @@ nav {
   background-color: "blue";
   border: 1px solid black;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 nav #nav-bar {
   border: 1px solid red;
