@@ -1,14 +1,14 @@
 /*Navigation CSS*/
 nav{
-    width: 100%;
+    width: @maxWidth;
     height: 50px;
     background-color: @navBarBgColor;
-    border: 1px solid black;
+    .border(@navigationBorderColor);
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 
     #nav-bar{
-        border: 1px solid red;
+        .border(red)
     }
 }
