@@ -348,13 +348,13 @@ template {
 }
 #navigation #nav-container #nav-logo .logo-mic {
   margin-right: 0px;
-  font-size: 4rem;
 }
 #navigation #nav-container #nav-logo #nav-heading {
   width: 120px;
 }
 #navigation #nav-container #nav-logo:hover {
   color: blue;
+  cursor: pointer;
 }
 #navigation #nav-container #nav-bar {
   margin: 0;
