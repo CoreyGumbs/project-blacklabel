@@ -1,14 +1,45 @@
 /*Navigation CSS*/
-nav{
+#navigation{
     width: @maxWidth;
-    height: 50px;
-    background-color: @navBarBgColor;
-    .border(@navigationBorderColor);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    .flexBox(row, wrap, space-between, center);
 
-    #nav-bar{
-        .border(red)
+    #nav-container{
+        width: 900px;
+        .border(black);
+        .flexBox(row, wrap, space-between, center);
+
+
+        #nav-logo{
+            .border(red);
+            .fontFam(@RalewayFont);
+            
+            #nav-heading{
+                display: block;
+            }
+        }
+
+        #nav-bar{
+            .border(green);
+            height: 60px;
+            margin: 0;
+            padding: 0;
+
+            #nav-list{
+                height: 50px;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                .flexBox(row, wrap, space-evenly, center);
+
+                .nav-items{
+                    padding: 10px;
+
+                    &:hover{
+                        background-color: blue;
+                        color: white;
+                    }
+                }
+            }
+        }
     }
 }

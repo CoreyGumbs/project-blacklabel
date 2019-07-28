@@ -1,3 +1,24 @@
+
+// border mixins
 .border(@border-color){
+
     border: solid 1px @border-color;
+
+}
+
+
+//flexbox mixins
+.flexBox(
+    @flexDirection, @flexWrap, @justifyContent: none, @align-items: none){
+
+    display: flex;
+    flex-flow: @flexDirection @flexWrap;
+    justify-content: @justifyContent;
+    align-items: @align-items;
+
+}
+
+//Font mixins
+.fontFam(@font){
+    font-family: @font;
 }
