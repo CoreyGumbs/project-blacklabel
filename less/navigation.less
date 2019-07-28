@@ -8,7 +8,6 @@
     #nav-container{
         width: 90%;
         margin: 0px auto;
-        //.border(red);
         .flexBox(row, wrap, space-between, center);
 
         #nav-logo{
@@ -18,15 +17,22 @@
             padding: 15px;
             color: @navLogoTxtColor;
             //.border(@LogoBorderColor); 
-            .fontFam(@NavLogoFont, .7rem);
-            .flexBox(column, no-wrap, space-around, center);
+            .fontFam(@NavLogoFont, .8rem);
+            .flexBox(column, wrap, space-around, center);
 
             .logo-mic{
-                margin-right: 0px;
+                margin-right: 10px;
             }
 
             #nav-heading{
                 width: 120px;
+                margin: 10px 0 0 0;
+            
+            }
+
+            #nav-tagline{
+                margin-top: 5px;
+                .fontFam(@NavTxtFont, .7rem);
             }
 
             &:hover{

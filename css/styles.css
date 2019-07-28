@@ -304,11 +304,11 @@ template {
   display: none;
 }
 @font-face {
-  font-family: 'Anton';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v11/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Raleway';
@@ -335,22 +335,28 @@ template {
   align-items: center;
 }
 #navigation #nav-container #nav-logo {
-  width: 180px;
+  width: 200px;
   height: 100px;
   padding: 15px;
   color: black;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: flex;
-  flex-flow: column no-wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
 }
 #navigation #nav-container #nav-logo .logo-mic {
-  margin-right: 0px;
+  margin-right: 10px;
 }
 #navigation #nav-container #nav-logo #nav-heading {
   width: 120px;
+  margin: 10px 0 0 0;
+}
+#navigation #nav-container #nav-logo #nav-tagline {
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
 }
 #navigation #nav-container #nav-logo:hover {
   color: blue;
