@@ -1,41 +1,59 @@
 /*Navigation CSS*/
 #navigation{
     width: @maxWidth;
+    padding: 25px;
+    //background-color: #ddd;
     .flexBox(row, wrap, space-between, center);
 
     #nav-container{
-        width: 900px;
-        .border(black);
+        width: 90%;
+        margin: 0px auto;
+        //.border(red);
         .flexBox(row, wrap, space-between, center);
 
 
         #nav-logo{
-            .border(red);
-            .fontFam(@RalewayFont);
-            
-            #nav-heading{
-                display: block;
+ 
+            width: @NavLogoWidth;
+            height: @NavLogoHeight ;
+            padding: 15px;
+            color: @navLogoTxtColor;
+            //.border(@LogoBorderColor); 
+            .fontFam(@NavLogoFont, .7rem);
+            .flexBox(column, no-wrap, space-around, center);
+
+            .logo-mic{
+                margin-right: 0px;
+                font-size: 4rem;
             }
+
+            #nav-heading{
+                width: 120px;
+            }
+
+            &:hover{
+                color: blue;
+            }
+            
         }
 
         #nav-bar{
-            .border(green);
-            height: 60px;
+            
             margin: 0;
             padding: 0;
 
             #nav-list{
-                height: 50px;
+         
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
                 .flexBox(row, wrap, space-evenly, center);
 
                 .nav-items{
+
                     padding: 10px;
 
                     &:hover{
-                        background-color: blue;
                         color: white;
                     }
                 }
