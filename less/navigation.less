@@ -1,31 +1,35 @@
 /*Navigation CSS*/
 #navigation{
+    
+    position: fixed;
+    top: 0;
     width: @maxWidth;
-    padding: 25px;
-    //background-color: #ddd;
-    .flexBox(row, wrap, space-between, center);
+    padding: 0;
+    background-color: #fff;
+    .flexBox(row, wrap, space-evenly, center);
+    z-index: 999;
 
     #nav-container{
-        width: 90%;
+        width: 80%;
         margin: 0px auto;
+        //.border(red);
         .flexBox(row, wrap, space-between, center);
 
         #nav-logo{
- 
             width: @NavLogoWidth;
             height: @NavLogoHeight ;
+            margin: 0px;
             padding: 15px;
-            color: @navLogoTxtColor;
-            //.border(@LogoBorderColor); 
-            
+            color: @navLogoTxtColor; 
             .flexBox(column, wrap, space-around, center);
 
+            //logo icon
             .logo-mic{
                 margin-right: 10px;
             }
 
             #nav-heading{
-                .fontFam(@NavLogoFont, 2rem);
+                .fontFam(@NavLogoFont, 1.5rem);
                 width: 120px;
                 margin: 15px 0 0 0;
             
@@ -33,11 +37,11 @@
 
             #nav-tagline{
                 margin-top: 5px;
-                .fontFam(@NavTxtFont, .8rem);
+                .fontFam(@NavTxtFont, .6rem);
             }
             
             &:hover{
-                color: blue;
+                color: #666;
                 cursor: pointer;
             }
         }
@@ -53,13 +57,23 @@
                 padding: 0;
                 list-style-type: none;
                 .flexBox(row, wrap, space-evenly, center);
-
+                
                 .nav-items{
 
-                    padding: 10px;
-
+                    .fontFam(@NavTxtFont, 1rem);
+                    margin-left: 10px;
+                    padding: 15px 15px;
+                    text-align: center;
+                    -webkit-transition:  all .3s ease-in-out;
+                    transition:  all .3s ease-in-out;
+                    text-decoration: none;
+                    cursor: pointer;
+        
                     &:hover{
-                        color: white;
+                        color:blue;
+                        border-bottom: blue 3px solid;
+                        border-radius: 10%;
+                        font-weight: bold;
                     }
                 }
             }

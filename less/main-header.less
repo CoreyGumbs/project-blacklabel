@@ -1,13 +1,29 @@
 #main-content{
+  
     width: @maxWidth;
+    margin: 130px 0 0 0;
+    padding:0;
+
 
     #main-header{
         width: @maxWidth;
-        height: 500px;
+        height: 1000px;
+        margin: 0 auto;
+        padding: 0;
         background-image:  url('../imgs/micbackground.jpg');
         background-repeat: no-repeat;
         background-position: 0 -100px;
         background-attachment: fixed;
-        background-size: 100% 100%;
+        background-size: 115% 115%;
+
+        #cta{
+            width: 500px;
+            height: 200px;
+            padding: 50px;
+            background-color: transparent;
+            color: #fff;
+            .fontFam(@CTAFont, 4rem);
+        }
     }
+
 }
