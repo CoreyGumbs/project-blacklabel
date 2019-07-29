@@ -17,7 +17,7 @@
             padding: 15px;
             color: @navLogoTxtColor;
             //.border(@LogoBorderColor); 
-            .fontFam(@NavLogoFont, .8rem);
+            
             .flexBox(column, wrap, space-around, center);
 
             .logo-mic{
@@ -25,16 +25,17 @@
             }
 
             #nav-heading{
+                .fontFam(@NavLogoFont, 2rem);
                 width: 120px;
-                margin: 10px 0 0 0;
+                margin: 15px 0 0 0;
             
             }
 
             #nav-tagline{
                 margin-top: 5px;
-                .fontFam(@NavTxtFont, .7rem);
+                .fontFam(@NavTxtFont, .8rem);
             }
-
+            
             &:hover{
                 color: blue;
                 cursor: pointer;

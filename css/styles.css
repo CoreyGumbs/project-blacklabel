@@ -339,8 +339,6 @@ template {
   height: 100px;
   padding: 15px;
   color: black;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.8rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -350,13 +348,15 @@ template {
   margin-right: 10px;
 }
 #navigation #nav-container #nav-logo #nav-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
   width: 120px;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 #navigation #nav-container #nav-logo #nav-tagline {
   margin-top: 5px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 #navigation #nav-container #nav-logo:hover {
   color: blue;
@@ -380,4 +380,16 @@ template {
 }
 #navigation #nav-container #nav-bar #nav-list .nav-items:hover {
   color: white;
+}
+#main-content {
+  width: 100%;
+}
+#main-content #main-header {
+  width: 100%;
+  height: 500px;
+  background-image: url('../imgs/micbackground.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
