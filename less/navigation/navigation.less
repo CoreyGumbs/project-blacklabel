@@ -7,27 +7,37 @@
     margin: 0;
     padding: 0;
     color: @navLogoTxtColor;  
+    .flexBox(row, nowrap, none, center);
+    z-index: 9999;
+
     -webkit-transition:  background-color .5s ease-in-out;
     transition:  background-color .5s linear;
-    z-index: 9999;
-    .flexBox(row, nowrap, none, center);
 
     .nav-container{
         width:  @contentWidth;
         margin: 20px auto;
         .flexBox(row, wrap, space-between, center); 
+
+        -webkit-transition:  margin .5s ease-in-out;
+        transition:  margin .5s linear;
+
+        &.nav-container-scroll{
+            margin: 0;
+        }
       
 
         .logo-container{
             width: 50%;  
-            .flexBox(columns, wrap, space-between, flex-start); 
+            .flexBox(columns, wrap, flex-start, flex-start); 
 
             .nav-logo-mic{
-                width: 20%;
+              
                 margin-right: 10px;
                
                 .logo-mic{
-                    font-size: 5.8rem;
+                    margin: 5px auto;
+                    font-size: 2rem;
+                    text-shadow: 2px 2px 2px black;
                 }
 
                 &.logo-mic-min{
@@ -36,11 +46,14 @@
             }
 
             .nav-logo-txt{
+               
                 .flexBox(row, wrap, space-between, flex-start);
 
                 .nav-logo-heading{
                     margin: 0;
-                    .fontFam(@NavLogoFont, 2.2rem);
+                    .fontFam(@NavLogoFont2, 2.2rem);
+                    text-shadow: 2px 2px 2px black;
+        
                 }
 
                 .nav-logo-tagline{
