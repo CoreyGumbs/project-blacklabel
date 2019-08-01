@@ -1,82 +1,92 @@
-/*Navigation CSS*/
-#navigation{
-    
+/*Navigation CSS Begins*/
+
+.navigation{
     position: fixed;
     top: 0;
     width: @maxWidth;
-    padding: 0;
-    background-color: #fff;
-    .flexBox(row, wrap, space-evenly, center);
-    z-index: 999;
+    -webkit-transition:  all .3s ease-in-out;
+    transition:  all .3s ease-in-out;
+    z-index: 9999;
 
-    #nav-container{
-        width: 80%;
-        margin: 0px auto;
-        //.border(red);
-        .flexBox(row, wrap, space-between, center);
+    .nav-container{
+        width:  80%;
+        margin: 20px auto 10px auto;
+        .flexBox(row, wrap, space-between, center); 
 
-        #nav-logo{
-            width: @NavLogoWidth;
-            height: @NavLogoHeight ;
-            margin: 0px;
-            padding: 15px;
+        .logo-container{
+            width: 20%;
             color: @navLogoTxtColor; 
-            .flexBox(column, wrap, space-around, center);
+            .flexBox(columns, wrap, space-between, flex-start); 
 
-            //logo icon
-            .logo-mic{
+            .nav-logo-mic{
                 margin-right: 10px;
+
+                .logo-mic{
+                    font-size: 5.8rem;
+                }
+
+                &.logo-mic-min{
+                    font-size: 1rem;
+                }
             }
 
-            #nav-heading{
-                .fontFam(@NavLogoFont, 1.5rem);
-                width: 120px;
-                margin: 15px 0 0 0;
-            
-            }
 
-            #nav-tagline{
-                margin-top: 5px;
-                .fontFam(@NavTxtFont, .6rem);
-            }
-            
-            &:hover{
-                color: #666;
-                cursor: pointer;
+            .nav-logo-txt{
+                .flexBox(row, wrap, space-between, flex-start);
+
+                .nav-logo-heading{
+                    margin: 0;
+                    .fontFam(@NavLogoFont, 2.2rem);
+                }
+
+                .nav-logo-tagline{
+                    margin: 3px 0 0 0;
+                    .fontFam(@NavTxtFont, .8rem);
+                }
             }
         }
 
-        #nav-bar{
-            
-            margin: 0;
-            padding: 0;
+        .nav-bar{
+            .flexBox(row, wrap, space-evenly, center);
 
-            #nav-list{
-         
-                margin: 0;
-                padding: 0;
+            .nav-list{
                 list-style-type: none;
-                .flexBox(row, wrap, space-evenly, center);
-                
-                .nav-items{
 
-                    .fontFam(@NavTxtFont, 1rem);
-                    margin-left: 10px;
-                    padding: 15px 15px;
-                    text-align: center;
-                    -webkit-transition:  all .3s ease-in-out;
-                    transition:  all .3s ease-in-out;
-                    text-decoration: none;
-                    cursor: pointer;
-        
-                    &:hover{
-                        color:blue;
-                        border-bottom: blue 3px solid;
-                        border-radius: 10%;
-                        font-weight: bold;
+                .nav-items{
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block; 
+
+                    .nav-link{
+                        padding: 10px;
+                        .fontFam(@NavTxtFont, 1rem); 
+                        color: @navLogoTxtColor; 
+                        text-align: right;
+                        text-decoration: none;
+                        cursor: pointer;
+                        -webkit-transition:  all .3s ease-in-out;
+                        transition:  all .3s ease-in-out;
+
+                        &:hover{
+                            color: red;
+                            border-bottom: red 3px solid;
+                            font-weight: bold;
+
+                        }
                     }
                 }
             }
         }
     }
+
+    &.transparent-bg{
+        background-color: transparent;
+    }
+
+    &.solid-bg{
+            background-color: @navBarBgColor;
+    }
+
 }
+
+/*Navigation CSS Ends*/

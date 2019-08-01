@@ -1,3 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Raleway Black'), local('Raleway-Black'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -303,103 +322,96 @@ template {
 [hidden] {
   display: none;
 }
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: local('Raleway Black'), local('Raleway-Black'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
-}
-/*Navigation CSS*/
-#navigation {
+/*Navigation CSS Begins*/
+.navigation {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0;
-  background-color: #fff;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 999;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
 }
-#navigation #nav-container {
+.navigation .nav-container {
   width: 80%;
-  margin: 0px auto;
+  margin: 20px auto 10px auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
-#navigation #nav-container #nav-logo {
-  width: 200px;
-  height: 100px;
-  margin: 0px;
-  padding: 15px;
-  color: black;
+.navigation .nav-container .logo-container {
+  width: 20%;
+  color: white;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-flow: columns wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-#navigation #nav-container #nav-logo .logo-mic {
+.navigation .nav-container .logo-container .nav-logo-mic {
   margin-right: 10px;
 }
-#navigation #nav-container #nav-logo #nav-heading {
+.navigation .nav-container .logo-container .nav-logo-mic .logo-mic {
+  font-size: 5.8rem;
+}
+.navigation .nav-container .logo-container .nav-logo-mic.logo-mic-min {
+  font-size: 1rem;
+}
+.navigation .nav-container .logo-container .nav-logo-txt {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.navigation .nav-container .logo-container .nav-logo-txt .nav-logo-heading {
+  margin: 0;
   font-family: 'Cardo', serif;
-  font-size: 1.5rem;
-  width: 120px;
-  margin: 15px 0 0 0;
+  font-size: 2.2rem;
 }
-#navigation #nav-container #nav-logo #nav-tagline {
-  margin-top: 5px;
+.navigation .nav-container .logo-container .nav-logo-txt .nav-logo-tagline {
+  margin: 3px 0 0 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
-#navigation #nav-container #nav-logo:hover {
-  color: #666;
-  cursor: pointer;
-}
-#navigation #nav-container #nav-bar {
-  margin: 0;
-  padding: 0;
-}
-#navigation #nav-container #nav-bar #nav-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.navigation .nav-container .nav-bar {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
 }
-#navigation #nav-container #nav-bar #nav-list .nav-items {
+.navigation .nav-container .nav-bar .nav-list {
+  list-style-type: none;
+}
+.navigation .nav-container .nav-bar .nav-list .nav-items {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.navigation .nav-container .nav-bar .nav-list .nav-items .nav-link {
+  padding: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  margin-left: 10px;
-  padding: 15px 15px;
-  text-align: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  color: white;
+  text-align: right;
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-#navigation #nav-container #nav-bar #nav-list .nav-items:hover {
-  color: blue;
-  border-bottom: blue 3px solid;
-  border-radius: 10%;
+.navigation .nav-container .nav-bar .nav-list .nav-items .nav-link:hover {
+  color: red;
+  border-bottom: red 3px solid;
   font-weight: bold;
 }
+.navigation.transparent-bg {
+  background-color: transparent;
+}
+.navigation.solid-bg {
+  background-color: #000;
+}
+/*Navigation CSS Ends*/
 #main-content {
   width: 100%;
-  margin: 130px 0 0 0;
+  margin: 0;
   padding: 0;
 }
 #main-content #main-header {
@@ -414,11 +426,22 @@ template {
   background-size: 115% 115%;
 }
 #main-content #main-header #cta {
-  width: 500px;
-  height: 200px;
-  padding: 50px;
-  background-color: transparent;
+  position: relative;
+  top: 150px;
+  left: 189px;
+  width: 50%;
+  padding: 50px 0;
   color: #fff;
   font-family: 'Raleway', sans-serif;
   font-size: 4rem;
+}
+#main-content #main-header #cta #cta-heading {
+  margin: 0;
+  padding: 0;
+}
+#main-content #main-header #cta #cta-sub-heading {
+  width: 80%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
 }
