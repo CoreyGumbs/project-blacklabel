@@ -4,6 +4,7 @@
     position: fixed;
     top: 0;
     width: @maxWidth;
+    color: @navLogoTxtColor;  
     -webkit-transition:  all .3s ease-in-out;
     transition:  all .3s ease-in-out;
     z-index: 9999;
@@ -15,7 +16,7 @@
 
         .logo-container{
             width: 20%;
-            color: @navLogoTxtColor; 
+             
             .flexBox(columns, wrap, space-between, flex-start); 
 
             .nav-logo-mic{
@@ -29,7 +30,6 @@
                     font-size: 1rem;
                 }
             }
-
 
             .nav-logo-txt{
                 .flexBox(row, wrap, space-between, flex-start);
@@ -84,7 +84,8 @@
     }
 
     &.solid-bg{
-            background-color: @navBarBgColor;
+            background-color: @navBarBgColorTrans;
+            box-shadow: .5px 2px 10px #000;
     }
 
 }

@@ -327,6 +327,7 @@ template {
   position: fixed;
   top: 0;
   width: 100%;
+  color: white;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 9999;
@@ -341,7 +342,6 @@ template {
 }
 .navigation .nav-container .logo-container {
   width: 20%;
-  color: white;
   display: flex;
   flex-flow: columns wrap;
   justify-content: space-between;
@@ -406,7 +406,8 @@ template {
   background-color: transparent;
 }
 .navigation.solid-bg {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0.5px 2px 10px #000;
 }
 /*Navigation CSS Ends*/
 #main-content {
