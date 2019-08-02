@@ -1,0 +1,110 @@
+/*Navigation CSS Begins*/
+
+.navigation{
+    position: fixed;
+    top: 0;
+    width: @maxWidth;
+    margin: 0;
+    padding: 0;
+    color: @navLogoTxtColor;  
+    .flexBox(row, nowrap, none, center);
+    z-index: 9999;
+
+    -webkit-transition:  background-color .5s ease-in-out;
+    transition:  background-color .5s linear;
+
+    .nav-container{
+        width:  @contentWidth;
+        margin: 20px auto;
+        .flexBox(row, wrap, space-between, center); 
+
+        -webkit-transition:  margin .5s ease-in-out;
+        transition:  margin .5s linear;
+
+        &.nav-container-scroll{
+            margin: 0;
+        }
+      
+
+        .logo-container{
+            width: 50%;  
+            .flexBox(columns, wrap, flex-start, flex-start); 
+
+            .nav-logo-mic{
+              
+                margin-right: 10px;
+               
+                .logo-mic{
+                    margin: 5px auto;
+                    font-size: 2rem;
+                    text-shadow: 2px 2px 2px blagck;
+                }
+
+                &.logo-mic-min{
+                    font-size: 1rem;
+                }
+            }
+
+            .nav-logo-txt{
+               
+                .flexBox(row, wrap, space-between, flex-start);
+
+                .nav-logo-heading{
+                    margin: 0;
+                    .fontFam(@NavLogoFont2, 2.2rem);
+                    text-shadow: 2px 2px 2px black;
+        
+                }
+
+                .nav-logo-tagline{
+                    margin: 0;
+                    .fontFam(@NavTxtFont, .8rem);
+                }
+            }
+        }
+
+        .nav-bar{
+            .flexBox(row, wrap, space-evenly, center);
+
+            .nav-list{
+                list-style-type: none;
+
+                .nav-items{
+                    margin: 0;
+                    padding: 0 10px;
+                    display: inline-block; 
+
+                    .nav-link{
+                        padding: 10px;
+                        .fontFam(@NavTxtFont, 1rem); 
+                        color: @navLogoTxtColor; 
+                        text-align: right;
+                        text-decoration: none;
+                        cursor: pointer;
+                        -webkit-transition:  all .3s ease-in-out;
+                        transition:  all .3s ease-in-out;
+
+                        &:hover{
+                            color: @navLinksHover;
+                            border-bottom: @navLinksHover 3px solid;
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.transparent-bg{
+        background-color: transparent;
+    }
+
+    &.solid-bg{
+            background-color: @navBarBgColorTrans;
+            box-shadow: .5px 2px 10px #000;
+    }
+
+}
+
+/*Navigation CSS Ends*/

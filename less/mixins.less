@@ -1,11 +1,10 @@
 
 // border mixins
-.border(@border-color){
+.border(@border-color, @border-size: 1px){
 
-    border: solid 1px @border-color;
+    border: solid @border-size @border-color;
 
 }
-
 
 //flexbox mixins
 .flexBox(
