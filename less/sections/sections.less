@@ -5,15 +5,23 @@
     padding: 0;
     .flexBox(row, wrap, space-between, center);
 
-    .about-section{
+    .section-primary-container{ 
         width: @maxWidth;
+    }
+
+    .section-content-container{
+        width: @contentWidth;
+    }
+
+    .section-primary-container, .section-content-container{
         margin: 0 auto;
         padding: 0;
+    }
+
+    .about-section-box{
         background-color: @aboutBgColor;
         
-        .about-items-container{
-            width: @contentWidth;
-            margin: 0 auto;
+        .about-items-box{
             padding: 50px 0;
             .flexBox(columns, wrap, space-between, center);
 
@@ -21,7 +29,7 @@
                 //.border(rgba(255, 255, 250, .1));
                 border-radius: 5px;
                 width: 30%;
-                padding: 30px;
+                padding: 0;
                 color: white;
                 .flexBox(row, wrap, space-between, center);
 
@@ -49,133 +57,65 @@
         }
     }
 
-
-
-    .section-container{
-        width: @contentWidth;
-        margin: 0 auto;
-        padding: 70px;
-        .flexBox(row, wrap, space-between, center);
-
-        .section-heading{
-            margin: 0;
-            color: rgba(0, 0, 128, 1);
-            .fontFam(@SectionHeadingFont, 4rem);
-          ;
-        }
-        
-        .section-text{
-            margin: 20px 0;
-            padding: 0;
-            line-height: 2.5rem;
-            .fontFam(@NavTxtFont, 1.2rem);
-        }
-    }
-
-    .section-anywhere-container{
-       
-        width: @maxWidth;
-        padding: 0;
-        .flexBox(columns, nowrap, space-between, center);
-
-        .left-content, .right-content{
-            .border(blue);
-            width: 100%;
-            height: 400px;
-            padding: 0;
-        }
-
-        .left-content{
-            background: linear-gradient(rgba(0,0,0,.9), rgba(0, 0, 80, .5),rgba(0,0,128,.5)), url('../../imgs/building.jpg');
-            background-position: cover;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-           
-        }
-        
-    }
-
-    .section-services-container{
-    
-        width: @maxWidth;
-        margin: 0 auto;
-        padding: 0;
+    .section-services-box{
         background-color: @servicesBgColor;
         .flexBox(row, wrap, space-between, center);
         z-index: -99;
 
-        .section-services{
-           
-            width: @contentWidth;
-            margin: 0 auto;
+        .section-services-header{
+            width: 100%;
+            margin: 50px auto;
             padding: 0;
-
-            .services-header{
-                width: 100%;
-                margin: 50px auto;
-                padding: 0;
-                text-align: center;
-                .fontFam(@SectionHeadingFont, 3.5rem);
-            }
-
-            .services{
-                margin: 20px auto 70px auto;
-                .flexBox(columns, nowrap, space-evenly, center);
-
-                .service-item{
-                    width: 400px;
-                    background-color: white;
-                    padding: 0;
-                    .flexBox(row, wrap, space-evenly, center);
-
-                    .service-item-img{
-                        width: 100%;
-                        height: 100%;
-                        padding: 0;
-                    }
-
-                    .service-item-header{
-                        margin: 50px auto;
-                        .fontFam(@SectionHeadingFont, 2.7rem);
-                    }
-
-                    .service-item-txt{
-                        margin: 0 auto;
-                        padding: 0 40px;
-                        line-height: 1.5rem;
-                        font-size: 1.2rem;
-                        text-align: center;
-                    }
-
-                    .service-item-btn{
-                        margin: 50px auto;
-                        padding: 10px 50px;
-                        background-color: rgb(206, 76, 76);
-                        color: white;
-                        border: 0;
-                        border-radius: 50px;
-                        outline: none;
-                    }
-                }
-            }
-            
+            text-align: center;
+            .fontFam(@SectionHeadingFont, 3.5rem);
         }
 
-      
+        .section-services{
+            margin: 20px auto 70px auto;
+            .flexBox(columns, nowrap, space-evenly, center);
+
+            .section-service-item{
+                width: 400px;
+                height: 100%;
+                background-color: white;
+                padding: 0;
+                .flexBox(row, wrap, space-evenly, center);
+
+                .section-service-item-img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+
+                .section-service-item-header{
+                    margin: 50px auto;
+                    padding: 0;
+                    .fontFam(@SectionHeadingFont, 2.7rem);
+                }
+
+                .section-service-item-txt{
+                    margin: 0 auto;
+                    padding: 0 40px;
+                    line-height: 1.5rem;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                .section-service-item-btn{
+                    margin: 50px auto;
+                    padding: 10px 50px;
+                    background-color: rgb(206, 76, 76);
+                    color: white;
+                    border: 0;
+                    border-radius: 50px;
+                    outline: none;
+                }
+            }
+        }
     }
 
-    .section-services-container::before{
-        content: '';
-        background: rgb(128, 7, 59) url('../../imgs/bright-squares.png') fixed;
-        position: absolute;
-        top: 850px;
-        width: 100%;
-        height: 200px;
-        z-index: -2;
-    }
+    .section-img-box{
 
-    .section-img-break{
-        width: @maxWidth;
         height: 400px;
         background: linear-gradient(rgba(0,0,0,.9), rgba(20,0,90,.7), rgba(60,0,100, .7), rgba(0,0,128, .7)), url('../../imgs/studio.jpg');
         background-position: cover;
@@ -185,11 +125,10 @@
         .flexBox(row, wrap, center, center);
     
 
-        .section-img-break-header-container{
-            width: @contentWidth;
+        .section-img-box-header-container{
             margin: auto;
     
-            .section-img-brk-header{
+            .section-img-box-header{
                 width: 100%;
                 margin: 0;
                 padding: 30px;
