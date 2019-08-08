@@ -1,24 +1,24 @@
 .cta-header{
-    position: relative;
-    top: -25px;
+
     width: @maxWidth;
     height: 950px;
     margin: 0 auto;
     padding: 0;
-    background: linear-gradient(rgba(0,0,0,.9), rgba(20, 0, 0, .7),rgba(0,0,128,.5)), url('../../imgs/mixer3.jpg');
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0, 0, 80, .5),rgba(0,0,128,.5)), url('../../imgs/mixer3.jpg');
     background-position: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     animation: bg-animation linear 50s infinite;
-    overflow: hidden;
 
     @keyframes bg-animation{
         from{
             background-size: 100% 100%;
+      ;
         }
         to{
             background-size: 130% 130%;
+         
         }
     }
 
@@ -26,7 +26,7 @@
         position: relative;
         top: 22%;
         width: @contentWidth;
-        margin: auto;
+        margin: 0 auto;
         color: #fff;
         .flexBox(row, wrap, space-between, center);
 
@@ -39,12 +39,12 @@
         .cta-sub-heading{
             width: @maxWidth;
             margin: 5px 0;
-            .fontFam(@NavTxtFont, 2.5rem);
+            .fontFam(@SectionHeadingFont, 2.5rem);
         }
 
         .cta-btn{
             width: 500px;
-            margin: 30px 0;
+            margin-top: 30px;
             padding: 20px;
             background-color: green;
             border: 0;

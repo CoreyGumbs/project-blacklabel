@@ -18,6 +18,13 @@
   src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v24/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+@font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 900;
@@ -409,7 +416,7 @@ template {
 }
 .navigation .nav-container .nav-bar .nav-list .nav-items .nav-link {
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   color: white;
   text-align: right;
@@ -431,19 +438,16 @@ template {
 }
 /*Navigation CSS Ends*/
 .cta-header {
-  position: relative;
-  top: -25px;
   width: 100%;
   height: 950px;
   margin: 0 auto;
   padding: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 0, 0, 0.7), rgba(0, 0, 128, 0.5)), url('../../imgs/mixer3.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 80, 0.5), rgba(0, 0, 128, 0.5)), url('../../imgs/mixer3.jpg');
   background-position: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   animation: bg-animation linear 50s infinite;
-  overflow: hidden;
 }
 @keyframes bg-animation {
   from {
@@ -457,7 +461,7 @@ template {
   position: relative;
   top: 22%;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   color: #fff;
   display: flex;
   flex-flow: row wrap;
@@ -473,12 +477,12 @@ template {
 .cta-header .cta-container .cta-sub-heading {
   width: 100%;
   margin: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
 }
 .cta-header .cta-container .cta-btn {
   width: 500px;
-  margin: 30px 0;
+  margin-top: 30px;
   padding: 20px;
   background-color: green;
   border: 0;
@@ -489,18 +493,143 @@ template {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  border: solid 1px blue;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-content .section-primary-container {
+  width: 100%;
+}
+#main-content .section-content-container {
+  width: 80%;
+}
+#main-content .section-primary-container,
+#main-content .section-content-container {
+  margin: 0 auto;
+  padding: 0;
+}
+#main-content .about-section-box {
+  background-color: #121317;
+}
+#main-content .about-section-box .about-items-box {
+  padding: 50px 0;
+  display: flex;
+  flex-flow: columns wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-content .about-section-box .about-items-box .about-item-box {
+  border-radius: 5px;
+  width: 30%;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-content .about-section-box .about-items-box .about-item-box .about-section-header {
+  margin: 0 auto 20px auto;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+#main-content .about-section-box .about-items-box .about-item-box .about-section-txt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+#main-content .about-section-box .about-items-box .vert-line {
+  background-color: rgba(128, 0, 0, 0.9);
+  margin: 20px auto 0 auto;
+  padding: 60px 1px;
+  border-radius: 5px;
+}
+#main-content .section-services-box {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -99;
+}
+#main-content .section-services-box .section-services-header {
+  width: 100%;
+  margin: 50px auto;
+  padding: 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+}
+#main-content .section-services-box .section-services {
+  margin: 20px auto 70px auto;
+  display: flex;
+  flex-flow: columns nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main-content .section-services-box .section-services .section-service-item {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main-content .section-services-box .section-services .section-service-item .section-service-item-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+#main-content .section-services-box .section-services .section-service-item .section-service-item-header {
+  margin: 50px auto;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.7rem;
+}
+#main-content .section-services-box .section-services .section-service-item .section-service-item-txt {
+  margin: 0 auto;
+  padding: 0 40px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#main-content .section-services-box .section-services .section-service-item .section-service-item-btn {
+  margin: 50px auto;
+  padding: 10px 50px;
+  background-color: #ce4c4c;
+  color: white;
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+}
+#main-content .section-img-box {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 0, 90, 0.7), rgba(60, 0, 100, 0.7), rgba(0, 0, 128, 0.7)), url('../../imgs/studio.jpg');
+  background-position: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100% 130%;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-#main-content .section-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 50px;
-  border: solid 1px red;
+#main-content .section-img-box .section-img-box-header-container {
+  margin: auto;
 }
-#main-content .section-container .section-text {
-  border: solid 1px green;
+#main-content .section-img-box .section-img-box-header-container .section-img-box-header {
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
 }
