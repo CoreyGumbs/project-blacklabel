@@ -336,6 +336,18 @@ template {
 [hidden] {
   display: none;
 }
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
 /*Navigation CSS Begins*/
 .navigation {
   position: fixed;
@@ -509,6 +521,14 @@ template {
   margin: 0 auto;
   padding: 0;
 }
+#main-content .section-headers {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+}
+#main-content .section-font {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
 #main-content .about-section-box {
   background-color: #121317;
 }
@@ -536,8 +556,6 @@ template {
   font-size: 2rem;
 }
 #main-content .about-section-box .about-items-box .about-item-box .about-section-txt {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
   line-height: 1.5rem;
   text-align: center;
 }
@@ -595,7 +613,6 @@ template {
   margin: 0 auto;
   padding: 0 40px;
   line-height: 1.5rem;
-  font-size: 1.2rem;
   text-align: center;
 }
 #main-content .section-services-box .section-services .section-service-item .section-service-item-btn {
@@ -609,7 +626,7 @@ template {
 }
 #main-content .section-img-box {
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 0, 90, 0.7), rgba(60, 0, 100, 0.7), rgba(0, 0, 128, 0.7)), url('../../imgs/studio.jpg');
+  background: url('../../imgs/studio.jpg');
   background-position: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -629,7 +646,32 @@ template {
   color: white;
   text-align: center;
   border-radius: 20px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 3.5rem;
   background-color: rgba(0, 0, 0, 0.7);
+}
+#main-content .section-why-box {
+  background: #990000;
+  border: solid 1px blue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .section-why-box .section-why-content-container {
+  border: solid 1px green;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#main-content .section-why-box .section-why-content-container .section-why-header {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+#main-content .section-why-box .section-why-content-container .section-why-txt {
+  color: white;
+  line-height: 3rem;
+  font-size: 1.5rem;
 }

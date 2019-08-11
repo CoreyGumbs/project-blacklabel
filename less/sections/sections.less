@@ -18,6 +18,15 @@
         padding: 0;
     }
 
+
+    .section-headers{
+        .fontFam(@SectionHeadingFont, 3.5rem);
+    }
+
+    .section-font{
+        .fontFam(@NavTxtFont, 1rem);
+    }
+
     .about-section-box{
         background-color: @aboutBgColor;
         
@@ -40,7 +49,6 @@
                 }
 
                 .about-section-txt{
-                    .fontFam(@NavTxtFont, 1rem);
                     line-height: 1.5rem;
                     text-align: center;
                 }
@@ -97,7 +105,6 @@
                     margin: 0 auto;
                     padding: 0 40px;
                     line-height: 1.5rem;
-                    font-size: 1.2rem;
                     text-align: center;
                 }
 
@@ -117,7 +124,8 @@
     .section-img-box{
 
         height: 400px;
-        background: linear-gradient(rgba(0,0,0,.9), rgba(20,0,90,.7), rgba(60,0,100, .7), rgba(0,0,128, .7)), url('../../imgs/studio.jpg');
+        // background: linear-gradient( rgba(0,0,0,.9), rgba(20,0,90,.7), rgba(60,0,100, .7), rgba(0,0,128, .7)), url('../../imgs/studio.jpg');
+        background: url('../../imgs/studio.jpg');
         background-position: cover;
         background-repeat: repeat;
         background-attachment: fixed;
@@ -135,10 +143,37 @@
                 color: white;
                 text-align: center;
                 border-radius: 20px;
-                .fontFam(@SectionHeadingFont, 3.5rem);
                 background-color: rgba(0,0,0,.7);
             }
 
         }
     }
+
+    .section-why-box{
+        background: @my-favorite-things-2-rgba;
+        .border(blue);
+        .flexBox(row, wrap, center, center);
+
+        .section-why-content-container{
+            .border(green);
+            margin: 0;
+            padding: 0;
+            .flexBox(row, wrap, flex-start, center);
+            
+            .section-why-header{
+                color: white;
+                margin: 0;
+                padding: 0;
+    
+            }
+
+            .section-why-txt{
+                color:white;
+                line-height: 3rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    
 }
