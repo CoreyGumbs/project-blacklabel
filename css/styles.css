@@ -4,13 +4,6 @@
   padding: 0;
 }
 @font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -30,6 +23,13 @@
   font-weight: 900;
   font-display: swap;
   src: local('Raleway Black'), local('Raleway-Black'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -403,7 +403,7 @@ template {
 }
 .navigation .nav-container .logo-container .nav-logo-txt .nav-logo-heading {
   margin: 0;
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.2rem;
   text-shadow: 2px 2px 2px black;
 }
@@ -438,8 +438,8 @@ template {
   transition: all 0.3s ease-in-out;
 }
 .navigation .nav-container .nav-bar .nav-list .nav-items .nav-link:hover {
-  color: rgba(0, 255, 0, 0.5);
-  border-bottom: rgba(0, 255, 0, 0.5) 3px solid;
+  color: rgba(128, 0, 0, 0.9);
+  border-bottom: rgba(128, 0, 0, 0.9) 3px solid;
 }
 .navigation.transparent-bg {
   background-color: transparent;
@@ -455,7 +455,7 @@ template {
   margin: 0 auto;
   padding: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 80, 0.5), rgba(0, 0, 128, 0.5)), url('../../imgs/mixer3.jpg');
-  background-position: cover;
+  background-position: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -529,11 +529,97 @@ template {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
 }
+#main-content .section-intro-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #fff 48%, #990000 20%);
+}
+#main-content .section-intro-box .section-intro-content {
+  height: 100%;
+  margin: 0;
+  padding: 200px 0;
+  display: flex;
+  flex-flow: columns wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-content .section-intro-box .section-intro-content .section-intro-img {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .section-intro-box .section-intro-content .section-intro-img .intro-img-box {
+  width: 600px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+#main-content .section-intro-box .section-intro-content .section-intro-img .intro-img-box .intro-img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 2000px 100px 5100px 2000px;
+}
+#main-content .section-intro-box .section-intro-content .section-intro {
+  width: 45%;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-header {
+  position: relative;
+  width: 100%;
+  margin: 20px 0 10px 0;
+  padding: 0 20px;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 5px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #990000;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-header::before {
+  left: 0;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-sub-header {
+  width: 100%;
+  margin: 20px 0;
+  color: #990000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-txt {
+  margin: 0;
+  padding: 10px 0;
+}
+#main-content .section-intro-box .section-intro-content .section-intro .intro-divider-line {
+  background-color: #cccccc;
+  margin: 20px auto 0 auto;
+  padding: 60px 1px;
+  border-radius: 5px;
+}
 #main-content .about-section-box {
+  position: relative;
   background-color: #121317;
+  z-index: 999;
 }
 #main-content .about-section-box .about-items-box {
-  padding: 50px 0;
+  padding: 30px 0;
   display: flex;
   flex-flow: columns wrap;
   justify-content: space-between;
@@ -560,7 +646,7 @@ template {
   text-align: center;
 }
 #main-content .about-section-box .about-items-box .vert-line {
-  background-color: rgba(128, 0, 0, 0.9);
+  background-color: #990000;
   margin: 20px auto 0 auto;
   padding: 60px 1px;
   border-radius: 5px;
@@ -602,6 +688,10 @@ template {
   width: 100%;
   height: 100%;
   padding: 0;
+  transition: all 0.2s ease;
+}
+#main-content .section-services-box .section-services .section-service-item .section-service-item-img:hover {
+  transform: scale(2);
 }
 #main-content .section-services-box .section-services .section-service-item .section-service-item-header {
   margin: 50px auto;
@@ -627,7 +717,7 @@ template {
 #main-content .section-img-box {
   height: 400px;
   background: url('../../imgs/studio.jpg');
-  background-position: cover;
+  background-position: contain;
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 100% 130%;
@@ -649,17 +739,16 @@ template {
   background-color: rgba(0, 0, 0, 0.7);
 }
 #main-content .section-why-box {
-  background: #990000;
-  border: solid 1px blue;
+  position: relative;
+  background: #1c2642;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 #main-content .section-why-box .section-why-content-container {
-  border: solid 1px green;
   margin: 0;
-  padding: 0;
+  padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -672,6 +761,21 @@ template {
 }
 #main-content .section-why-box .section-why-content-container .section-why-txt {
   color: white;
+  margin-top: 30px;
   line-height: 3rem;
   font-size: 1.5rem;
+}
+#main-content .section-why-box::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+  z-index: -1;
 }
