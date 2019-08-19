@@ -26,6 +26,7 @@
 
     .section-font{
         .fontFam(@NavTxtFont, 1rem);
+        text-indent: 20px;
     }
 
     .section-intro-box{
@@ -103,6 +104,7 @@
                 .intro-txt{
                     margin: 0;
                     padding: 10px 0 20px 0;
+                    line-height: 1.5rem;
                 }
     
                 .intro-divider-line{
@@ -157,23 +159,23 @@
             }
 
         }
-    }
 
-    .about-section-box::after{
-        .border(blue);
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;   
-        background: inherit;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: skewY(-2.5deg);
-        border: 0;
-        z-index: -1;
+        &::after{
+    
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;   
+            background: inherit;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform-origin: top left;
+            transform: skewY(-2.5deg);
+            border: 0;
+            z-index: -1;
+        }
     }
     
     .section-process-box{
@@ -182,53 +184,135 @@
         .section-process-content{
             background-color: #fff;
             margin: 0;
-            padding: 100px 0;
+            padding: 50px 0;
             .flexBox(row, wrap, center, center );
 
             .section-process-header{
                 position: relative;
                 width: 100%;
-                margin: 20px 0 10px 0;
+                margin: 20px 0;
                 padding: 0 20px;
-            }
-    
-            .section-process-header::before{
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '';
-                width: 5px;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                display: block;
-                background-color: @my-favorite-things-2-rgba;
-            }
-    
-            .section-process-header::before{ 
-                left: 0;  
-            }
 
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 5px;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    background-color: @my-favorite-things-2-rgba;
+                }
+        
+               &::before{ 
+                    left: 0;  
+                }
+            }
+    
             .section-process-sub-header{
                 width: 100%;
                 margin: 20px 0;
                 color: @my-favorite-things-2-rgba;
-                .fontFam(@NavTxtFont, 1.2rem);
+                .fontFam(@NavTxtFont, 1.5rem);
+                font-weight: bold;
             }
+            
+            .section-process-main-txt{
+                margin: 20px 0;
+                padding: 0;
+                .fontFam(@NavTxtFont, 1rem);
+                line-height: 2rem; 
+                font-size: 1.2rem; 
+                color: #999;
+            }
+        }
+    }
 
-            .section-process-columns-box{
-                .flexBox(columns, wrap, space-between, center);
+    .section-process-col-container{
+        background-color: #e9e9e9;
+        margin: 0;
+        padding: 150px 0;
+        .flexBox(row, wrap, center, center);
 
-                .section-process-column{
-                    width: 33%;
-                    padding: 0 30px;
+        .section-process-columns-box{
+            margin: 0;
+            padding: 0;
+            .flexBox(columns, wrap, space-between, center);
+    
+            .section-process-column{
+                width: 33%;
+                margin: 0;
+                padding: 0 20px;
+                .flexBox(row, wrap, center, center);
+    
+                .section-process-column-sub-heading{
+                    position: relative;
+                    width: 100%;
+                    margin:0;
+                    padding: 0;
+                    .fontFam(@NavTxtFont, 1.5rem);
+                    text-align: center;
+    
+                    &::before{
+                        position: absolute;
+                        content: " ";
+                        margin: -15px auto;
+                        padding: 0;
+                        width: 65%;
+                        height: 2px;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: @my-favorite-things-2-rgba;
+                        border-radius: 5px;
+                    }
+    
+                    &::after{
+                        position: absolute;
+                        content: " ";
+                        margin: 40px auto;
+                        padding: 0;
+                        width: 65%;
+                        height: 2px;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: @my-favorite-things-2-rgba;
+                        border-radius: 5px;
+                    }
+    
                 }
+    
+                .section-process-column-txt-heading{
+                    
+                    width: 100%;
+                    margin: 50px 0 0 0;
+                    padding: 0px;
+                    .fontFam(sans-serif, 1rem);
+                    color: #333;
+                }
+    
+                .section-process-column-txt{
+                    
+                    margin: 10px 0;
+                    padding: 0;
+                    line-height: 1.5rem;
+                }
+    
+                .section-process-column-txt:nth-of-type(1n){
+                
+                }
+    
             }
-
         }
 
 
     }
+    
 
     .section-services-box{
         background-color: @servicesBgColor;
