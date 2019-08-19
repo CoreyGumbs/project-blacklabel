@@ -36,7 +36,7 @@
         .section-intro-content{
             height: 100%;
             margin: 0;
-            padding: 200px 0;
+            padding: 50px 0 100px 0;
             .flexBox(columns, wrap, space-between , center);
 
             .section-intro-img{
@@ -102,7 +102,7 @@
     
                 .intro-txt{
                     margin: 0;
-                    padding: 10px 0;
+                    padding: 10px 0 20px 0;
                 }
     
                 .intro-divider-line{
@@ -119,6 +119,7 @@
 
     .about-section-box{
         position: relative;
+        padding: 50px 0;
         background-color: @aboutBgColor;
         z-index: 999;
         
@@ -157,23 +158,58 @@
         }
     }
 
-    // .about-section-box::after{
-    //     position: absolute;
-    //     content: '';
-    //     width: 100%;
-    //     height: 100%;   
-    //     background: inherit;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     transform-origin: top left;
-    //     transform: skewY(4deg);
-    //     z-index: -1;
-    // }
+    .about-section-box::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;   
+        background: inherit;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform-origin: top left;
+        transform: skewY(-2.5deg);
+        z-index: -1;
+    }
+    
+    .section-process-box{
+        .flexBox(row, wrap, center, center);
+
+        .section-process-content{
+
+            .section-process-header{
+                position: relative;
+                width: 100%;
+                margin: 20px 0 10px 0;
+                padding: 0 20px;
+            }
+    
+            .section-process-header::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 5px;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                display: block;
+                background-color: @my-favorite-things-2-rgba;
+            }
+    
+            .section-process-header::before{ 
+                left: 0;  
+            }
+
+        }
+
+
+    }
 
     .section-services-box{
         background-color: @servicesBgColor;
+        padding: 50px 0;
         .flexBox(row, wrap, space-between, center);
         z-index: -99;
 
