@@ -118,9 +118,10 @@
 
 
     .about-section-box{
+
         position: relative;
         padding: 50px 0;
-        background-color: @aboutBgColor;
+        background: @aboutBgColor url('../../imgs/subtle-dots.png');
         z-index: 999;
         
         .about-items-box{
@@ -159,6 +160,7 @@
     }
 
     .about-section-box::after{
+        .border(blue);
         position: absolute;
         content: '';
         width: 100%;
@@ -170,13 +172,18 @@
         left: 0;
         transform-origin: top left;
         transform: skewY(-2.5deg);
+        border: 0;
         z-index: -1;
     }
     
     .section-process-box{
         .flexBox(row, wrap, center, center);
-
+    
         .section-process-content{
+            background-color: #fff;
+            margin: 0;
+            padding: 100px 0;
+            .flexBox(row, wrap, center, center );
 
             .section-process-header{
                 position: relative;
@@ -200,6 +207,22 @@
     
             .section-process-header::before{ 
                 left: 0;  
+            }
+
+            .section-process-sub-header{
+                width: 100%;
+                margin: 20px 0;
+                color: @my-favorite-things-2-rgba;
+                .fontFam(@NavTxtFont, 1.2rem);
+            }
+
+            .section-process-columns-box{
+                .flexBox(columns, wrap, space-between, center);
+
+                .section-process-column{
+                    width: 33%;
+                    padding: 0 30px;
+                }
             }
 
         }
@@ -272,7 +295,6 @@
     .section-img-box{
 
         height: 400px;
-        // background: linear-gradient( rgba(0,0,0,.9), rgba(20,0,90,.7), rgba(60,0,100, .7), rgba(0,0,128, .7)), url('../../imgs/studio.jpg');
         background: url('../../imgs/studio.jpg');
         background-position: contain;
         background-repeat: repeat;

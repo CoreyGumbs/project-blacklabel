@@ -390,7 +390,7 @@ template {
 .navigation .nav-container .logo-container .nav-logo-mic .logo-mic {
   margin: 5px auto;
   font-size: 2rem;
-  text-shadow: 2px 2px 2px blagck;
+  text-shadow: 2px 2px 2px black;
 }
 .navigation .nav-container .logo-container .nav-logo-mic.logo-mic-min {
   font-size: 1rem;
@@ -403,7 +403,7 @@ template {
 }
 .navigation .nav-container .logo-container .nav-logo-txt .nav-logo-heading {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 2.2rem;
   text-shadow: 2px 2px 2px black;
 }
@@ -616,7 +616,7 @@ template {
 #main-content .about-section-box {
   position: relative;
   padding: 50px 0;
-  background-color: #121317;
+  background: #121317 url('../../imgs/subtle-dots.png');
   z-index: 999;
 }
 #main-content .about-section-box .about-items-box {
@@ -653,6 +653,7 @@ template {
   border-radius: 5px;
 }
 #main-content .about-section-box::after {
+  border: solid 1px blue;
   position: absolute;
   content: '';
   width: 100%;
@@ -664,9 +665,19 @@ template {
   left: 0;
   transform-origin: top left;
   transform: skewY(-2.5deg);
+  border: 0;
   z-index: -1;
 }
 #main-content .section-process-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .section-process-box .section-process-content {
+  background-color: #fff;
+  margin: 0;
+  padding: 100px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -692,6 +703,23 @@ template {
 }
 #main-content .section-process-box .section-process-content .section-process-header::before {
   left: 0;
+}
+#main-content .section-process-box .section-process-content .section-process-sub-header {
+  width: 100%;
+  margin: 20px 0;
+  color: #990000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+#main-content .section-process-box .section-process-content .section-process-columns-box {
+  display: flex;
+  flex-flow: columns wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-content .section-process-box .section-process-content .section-process-columns-box .section-process-column {
+  width: 33%;
+  padding: 0 30px;
 }
 #main-content .section-services-box {
   background-color: #F5F5F5;
