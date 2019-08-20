@@ -695,9 +695,9 @@ template {
   color: #999;
 }
 #main-content .section-process-col-container {
-  background-color: #e9e9e9;
+  background-color: #191919;
   margin: 0;
-  padding: 150px 0;
+  padding: 100px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -706,6 +706,7 @@ template {
 #main-content .section-process-col-container .section-process-columns-box {
   margin: 0;
   padding: 0;
+  color: #eee;
   display: flex;
   flex-flow: columns wrap;
   justify-content: space-between;
@@ -759,16 +760,30 @@ template {
 }
 #main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-txt-heading {
   width: 100%;
-  margin: 50px 0 0 0;
+  margin: 60px 0 0 0;
   padding: 0px;
+  color: #999;
   font-family: sans-serif;
   font-size: 1rem;
-  color: #333;
 }
 #main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-txt {
-  margin: 10px 0;
+  margin: 30px 0;
   padding: 0;
   line-height: 1.5rem;
+}
+#main-content .section-process-col-container .section-book-now-btn {
+  width: 500px;
+  margin: 100px 0 0 0;
+  padding: 20px 125px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #04891c;
+  border: 0;
+}
+#main-content .section-process-col-container .section-book-now-btn:hover {
+  background-color: #023A11;
+  color: #ccc;
 }
 #main-content .section-services-box {
   background-color: #F5F5F5;
