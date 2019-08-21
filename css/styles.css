@@ -697,7 +697,7 @@ template {
 #main-content .section-process-col-container {
   background-color: #191919;
   margin: 0;
-  padding: 100px 0;
+  padding: 50px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -713,6 +713,7 @@ template {
   align-items: center;
 }
 #main-content .section-process-col-container .section-process-columns-box .section-process-column {
+  border: solid 1px red;
   width: 33%;
   margin: 0;
   padding: 0 20px;
@@ -720,11 +721,12 @@ template {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 }
 #main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-sub-heading {
   position: relative;
   width: 100%;
-  margin: 0;
+  margin: 50px 0 0 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
@@ -758,7 +760,14 @@ template {
   background-color: #990000;
   border-radius: 5px;
 }
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-txt-heading {
+#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item {
+  border: solid 1px blue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item .section-process-column-txt-heading {
   width: 100%;
   margin: 60px 0 0 0;
   padding: 0px;
@@ -766,10 +775,15 @@ template {
   font-family: sans-serif;
   font-size: 1rem;
 }
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-txt {
+#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item .section-process-column-txt {
   margin: 30px 0;
   padding: 0;
   line-height: 1.5rem;
+}
+#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  border: 1px solid red;
 }
 #main-content .section-process-col-container .section-book-now-btn {
   width: 500px;
@@ -780,6 +794,7 @@ template {
   color: #fff;
   background-color: #04891c;
   border: 0;
+  border-radius: 5px;
 }
 #main-content .section-process-col-container .section-book-now-btn:hover {
   background-color: #023A11;

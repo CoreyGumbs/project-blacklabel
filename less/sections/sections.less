@@ -234,26 +234,27 @@
 
         background-color: #191919;
         margin: 0;
-        padding: 100px 0;
+        padding: 50px 0;
         .flexBox(row, wrap, center, center);
 
         .section-process-columns-box{
-           
             margin: 0;
             padding: 0;
             color: #eee;
             .flexBox(columns, wrap, space-between, center);
     
             .section-process-column{
+                .border(red);
                 width: 33%;
                 margin: 0;
                 padding: 0 20px;
                 .flexBox(row, wrap, center, center);
-    
+                transition: all .2s ease-in-out;
+
                 .section-process-column-sub-heading{
                     position: relative;
                     width: 100%;
-                    margin:0;
+                    margin: 50px 0 0 0;
                     padding: 0;
             
                     .fontFam(@NavTxtFont, 1.5rem);
@@ -290,25 +291,39 @@
                     }
     
                 }
-    
-                .section-process-column-txt-heading{
-                    
-                    width: 100%;
-                    margin: 60px 0 0 0;
-                    padding: 0px;
-                    color: #999;
-                    .fontFam(sans-serif, 1rem);
+
+                .section-process-phase-item{
+                    .border(blue);
+                    .flexBox(row, wrap, center, center);
+        
+                    .section-process-column-txt-heading{
+                        
+                        width: 100%;
+                        margin: 60px 0 0 0;
+                        padding: 0px;
+                        color: #999;
+                        .fontFam(sans-serif, 1rem);
+                    }
+        
+                    .section-process-column-txt{
+                        
+                        margin: 30px 0;
+                        padding: 0;
+                        line-height: 1.5rem;
+                    }
+
+                    &:hover{
+                        // background-color: #152526;
+                        border-radius: 10px;
+                        transform: scale(1.1);
+                        border: 1px solid red;
+                    }
+
                 }
-    
-                .section-process-column-txt{
-                    
-                    margin: 30px 0;
-                    padding: 0;
-                    line-height: 1.5rem;
-                }
-    
             }
         }
+
+
 
         .section-book-now-btn{
             width: 500px;
@@ -318,7 +333,7 @@
             color: #fff;
             background-color:@IMG-20180118-WA0004-4-rgba;
             border: 0;
-            // border-radius: 20px;
+            border-radius: 5px;
         }
 
         .section-book-now-btn:hover{
