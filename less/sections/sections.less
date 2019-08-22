@@ -231,7 +231,6 @@
     }
 
     .section-process-col-container{
-
         background-color: #191919;
         margin: 0;
         padding: 50px 0;
@@ -244,17 +243,16 @@
             .flexBox(columns, wrap, space-between, center);
     
             .section-process-column{
-                .border(red);
                 width: 33%;
                 margin: 0;
                 padding: 0 20px;
                 .flexBox(row, wrap, center, center);
-                transition: all .2s ease-in-out;
+                transition: all .2s;
 
                 .section-process-column-sub-heading{
                     position: relative;
                     width: 100%;
-                    margin: 50px 0 0 0;
+                    margin: 50px 0 50px 0;
                     padding: 0;
             
                     .fontFam(@NavTxtFont, 1.5rem);
@@ -292,38 +290,37 @@
     
                 }
 
+                .section-process-column-txt-heading{ 
+                    margin: 0;   
+                    width: 100%;
+                    margin: 0;
+                    padding: 0 25px;
+                    color: #999;
+                    .fontFam(sans-serif, 1rem);
+                }
+
                 .section-process-phase-item{
-                    .border(blue);
+                    padding: 0 25px;
+                    margin: 0;
                     .flexBox(row, wrap, center, center);
         
-                    .section-process-column-txt-heading{
-                        
-                        width: 100%;
-                        margin: 60px 0 0 0;
-                        padding: 0px;
-                        color: #999;
-                        .fontFam(sans-serif, 1rem);
-                    }
-        
-                    .section-process-column-txt{
-                        
+                    .section-process-column-txt{  
                         margin: 30px 0;
                         padding: 0;
                         line-height: 1.5rem;
                     }
 
                     &:hover{
-                        // background-color: #152526;
-                        border-radius: 10px;
-                        transform: scale(1.1);
-                        border: 1px solid red;
+                        //background-color: #152526;
+                        background-color: @my-favorite-things-2-rgba;
+                        padding: 0 25px;
+                        border-radius: 5px;
+                        transform:scale(1.2);
+                        transition: background-color .3s ease-in-out;
                     }
-
                 }
             }
         }
-
-
 
         .section-book-now-btn{
             width: 500px;
