@@ -694,16 +694,19 @@ template {
   font-size: 1.2rem;
   color: #999;
 }
-#main-content .section-process-col-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../imgs/headphone.jpg') no-repeat left center / 100% fixed;
+#main-content .section-process-cols-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../imgs/headphone.jpg') right center / 100% no-repeat;
   margin: 0;
-  padding: 50px 0;
+  padding: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
-#main-content .section-process-col-container .section-process-columns-box {
+#main-content .section-process-cols-container .section-process-cols-box {
+  background-color: rgba(153, 0, 0, 0.6);
+  width: 50%;
+  height: 500px;
   margin: 0;
   padding: 0;
   color: #eee;
@@ -711,96 +714,6 @@ template {
   flex-flow: columns wrap;
   justify-content: space-between;
   align-items: center;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column {
-  width: 33%;
-  margin: 0;
-  padding: 0 20px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-sub-heading {
-  position: relative;
-  width: 100%;
-  margin: 50px 0 50px 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-sub-heading::before {
-  position: absolute;
-  content: " ";
-  margin: -15px auto;
-  padding: 0;
-  width: 65%;
-  height: 2px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #990000;
-  border-radius: 5px;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-sub-heading::after {
-  position: absolute;
-  content: " ";
-  margin: 40px auto;
-  padding: 0;
-  width: 65%;
-  height: 2px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #990000;
-  border-radius: 5px;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-column-txt-heading {
-  width: 100%;
-  margin: 0;
-  padding: 0 25px;
-  color: #999;
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item {
-  padding: 0 25px;
-  margin: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item .section-process-column-txt {
-  margin: 30px 0;
-  padding: 0;
-  line-height: 1.5rem;
-}
-#main-content .section-process-col-container .section-process-columns-box .section-process-column .section-process-phase-item:hover {
-  background-color: #990000;
-  padding: 0 25px;
-  border-radius: 5px;
-  transform: scale(1.2);
-  transition: background-color 0.3s ease-in-out;
-}
-#main-content .section-process-col-container .section-book-now-btn {
-  width: 500px;
-  margin: 100px 0 0 0;
-  padding: 20px 125px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.3rem;
-  color: #fff;
-  background-color: #04891c;
-  border: 0;
-  border-radius: 5px;
-}
-#main-content .section-process-col-container .section-book-now-btn:hover {
-  background-color: #023A11;
-  color: #ccc;
 }
 #main-content .section-services-box {
   background-color: #F5F5F5;

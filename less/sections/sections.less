@@ -230,112 +230,21 @@
         }
     }
 
-    .section-process-col-container{
-        background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)),url('../../imgs/headphone.jpg') no-repeat left center/100%  fixed;
+    .section-process-cols-container{
+        background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)),url('../../imgs/headphone.jpg') right center/100% no-repeat;
         margin: 0;
-        padding: 50px 0;
-        .flexBox(row, wrap, center, center);
+        padding: 0;
+        .flexBox(row, wrap, flex-start, center);
 
-        .section-process-columns-box{
+        .section-process-cols-box{
+            background-color: rgba(153, 0, 0, .6);
+            width: 50%;
+            height: 500px;
             margin: 0;
             padding: 0;
             color: #eee;
             .flexBox(columns, wrap, space-between, center);
-    
-            .section-process-column{
-                width: 33%;
-                margin: 0;
-                padding: 0 20px;
-                .flexBox(row, wrap, center, center);
-                transition: all .2s;
 
-                .section-process-column-sub-heading{
-                    position: relative;
-                    width: 100%;
-                    margin: 50px 0 50px 0;
-                    padding: 0;
-            
-                    .fontFam(@NavTxtFont, 1.5rem);
-                    text-align: center;
-    
-                    &::before{
-                        position: absolute;
-                        content: " ";
-                        margin: -15px auto;
-                        padding: 0;
-                        width: 65%;
-                        height: 2px;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        background-color: @my-favorite-things-2-rgba;
-                        border-radius: 5px;
-                    }
-    
-                    &::after{
-                        position: absolute;
-                        content: " ";
-                        margin: 40px auto;
-                        padding: 0;
-                        width: 65%;
-                        height: 2px;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        background-color: @my-favorite-things-2-rgba;
-                        border-radius: 5px;
-                    }
-    
-                }
-
-                .section-process-column-txt-heading{ 
-                    margin: 0;   
-                    width: 100%;
-                    margin: 0;
-                    padding: 0 25px;
-                    color: #999;
-                    .fontFam(sans-serif, 1rem);
-                }
-
-                .section-process-phase-item{
-                    padding: 0 25px;
-                    margin: 0;
-                    .flexBox(row, wrap, center, center);
-        
-                    .section-process-column-txt{  
-                        margin: 30px 0;
-                        padding: 0;
-                        line-height: 1.5rem;
-                    }
-
-                    &:hover{
-                        //background-color: #152526;
-                        background-color: @my-favorite-things-2-rgba;
-                        padding: 0 25px;
-                        border-radius: 5px;
-                        transform:scale(1.2);
-                        transition: background-color .3s ease-in-out;
-                    }
-                }
-            }
-        }
-
-        .section-book-now-btn{
-            width: 500px;
-            margin: 100px 0 0 0;
-            padding: 20px 125px;
-            .fontFam(@SectionHeadingFont, 1.3rem);
-            color: #fff;
-            background-color:@IMG-20180118-WA0004-4-rgba;
-            border: 0;
-            border-radius: 5px;
-        }
-
-        .section-book-now-btn:hover{
-            background-color: #023A11;
-            color: #ccc;
         }
 
     }
