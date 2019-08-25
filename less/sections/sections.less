@@ -234,22 +234,47 @@
         background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)),url('../../imgs/headphone.jpg') right center/100% no-repeat;
         margin: 0;
         padding: 0;
-        .flexBox(row, wrap, flex-start, center);
+        .flexBox(row, wrap, center, center);
 
         .section-process-cols-box{
-            background-color: rgba(153, 0, 0, .6);
-            width: 50%;
             height: 500px;
             margin: 0;
             padding: 0;
             color: #eee;
-            .flexBox(columns, wrap, space-between, center);
+            .flexBox(columns, wrap, space-evenly, center);
+
+            .section-process-phase-box{
+                padding: 20px;
+
+                .section-process-phase-header{
+                    position: relative;
+                    padding: 0 20px;
+                    font-size: 1.7rem;
+
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: '';
+                        width: 5px;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        display: block;
+                        background-color: @my-favorite-things-2-rgba;
+                    }
+            
+                   &::before{ 
+                        left: 0;  
+                    }
+                }
+
+
+            }
 
         }
-
     }
     
-
     .section-services-box{
         background-color: @servicesBgColor;
         padding: 50px 0;

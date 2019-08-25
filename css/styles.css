@@ -700,20 +700,41 @@ template {
   padding: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 #main-content .section-process-cols-container .section-process-cols-box {
-  background-color: rgba(153, 0, 0, 0.6);
-  width: 50%;
   height: 500px;
   margin: 0;
   padding: 0;
   color: #eee;
   display: flex;
   flex-flow: columns wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+}
+#main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box {
+  padding: 20px;
+}
+#main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box .section-process-phase-header {
+  position: relative;
+  padding: 0 20px;
+  font-size: 1.7rem;
+}
+#main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box .section-process-phase-header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 5px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #990000;
+}
+#main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box .section-process-phase-header::before {
+  left: 0;
 }
 #main-content .section-services-box {
   background-color: #F5F5F5;
