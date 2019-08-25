@@ -237,17 +237,20 @@
         .flexBox(row, wrap, center, center);
 
         .section-process-cols-box{
-            height: 500px;
             margin: 0;
-            padding: 0;
+            padding: 50px 0;
             color: #eee;
-            .flexBox(columns, wrap, space-evenly, center);
+            .flexBox(columns, wrap, space-between, center);
 
             .section-process-phase-box{
-                padding: 20px;
+                width: 33%;
+                margin: 30px 0;
+                padding: 0 20px;
 
                 .section-process-phase-header{
+                   
                     position: relative;
+                    margin: 0 0 30px 0;
                     padding: 0 20px;
                     font-size: 1.7rem;
 
@@ -268,6 +271,35 @@
                         left: 0;  
                     }
                 }
+
+                .section-process-phase-text-box{
+                    margin: 30px 0;
+                    padding: 25px;
+                    background-color: rgba(0,0,0,.3);
+                    transition: all .2 ease-in;
+                
+                    .section-process-phase-sub-header{
+                        margin: 0 0 20px 0;
+                        padding: 0;
+                        .fontFam(@CTAFont, 1.2rem);
+                        color: #999;
+                    }
+    
+                    .section-process-phase-txt{
+                        margin: 0;
+                        padding: 0;
+                        .fontFam(sans-serif, 1rem);
+                        line-height: 1.7rem;
+                    }
+
+                    &:hover{
+                    background-color: rgba(128, 0,0, .5);
+                    transform: scale(1.1);
+
+                    }
+                }
+
+    
 
 
             }
