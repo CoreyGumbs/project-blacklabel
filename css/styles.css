@@ -739,6 +739,7 @@ template {
   left: 0;
 }
 #main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box .section-process-phase-text-box {
+  width: 100%;
   margin: 30px 0;
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -759,7 +760,7 @@ template {
   line-height: 1.7rem;
 }
 #main-content .section-process-cols-container .section-process-cols-box .section-process-phase-box .section-process-phase-text-box:hover {
-  background-color: rgba(128, 0, 0, 0.5);
+  background-color: rgba(128, 0, 0, 0.6);
   transform: scale(1.1);
 }
 #main-content .section-services-box {
